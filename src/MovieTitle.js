@@ -16,7 +16,6 @@ function MovieTitle() {
         placeholder='최소 한 글자 이상 입력하세요.'
         onChange={onChange}
       />
-      <span>{title}</span>
     </div>
   )
 }

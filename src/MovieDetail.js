@@ -28,9 +28,6 @@ function MovieDetail() {
           placeholder='ex. 2024년 01월 31일 10:00'
         />
       </div>
-      <span>{state.date}</span>
-      <span>{state.theater}</span>
-      <span>{state.seat}</span>
       <div>
         <label htmlFor='theater'>영화관</label>
         <input 
