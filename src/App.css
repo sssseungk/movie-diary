@@ -1,6 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+
 /* * App */
 .movieDiary{
-  padding: 40px;
+  box-sizing: border-box;
+  font-family: 'Gowun Dodum', sans-serif;
+  display: flex;
+  flex-direction: column;
+  max-width: 1024px;
+  border-radius: 16px;
+  margin: 0 auto;
+  background-color: whitesmoke;
+}
+
+/* * movieWrite */
+.movieWrite{
+  padding: 60px 80px;
 }
 
 /* * movieTitle 컴포넌트 */
@@ -16,6 +31,7 @@
 }
 
 .movieTitle input{
+  font-family: 'Gowun Dodum', sans-serif;
   width: 360px;
   padding: 16px 20px;
   border-radius: 8px;
@@ -43,6 +59,7 @@
 }
 
 .movieDetail input{
+  font-family: 'Gowun Dodum', sans-serif;
   width: 360px;
   padding: 16px 20px;
   border-radius: 8px;
@@ -60,6 +77,7 @@
 .movieDetail .movieStar{
   display: flex;
   flex-direction: column;
+  margin-bottom: 100px;
 }
 
 .movieDetail .movieStar select{
@@ -67,6 +85,65 @@
   font-size: 20px;
   padding: 10px;
   border-radius: 8px;
-  border-color: gray;
   outline: none;
 }
+
+/* * MovieNav 컴포넌트 */
+.movieNav ul{
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 0;
+  background-color: #FFFEFE;
+}
+
+.movieNav ul li{
+  list-style-type: none;
+}
+
+.movieNav ul li a{
+  padding: 24px 231.5px;
+  display: block;
+  list-style-type: none;
+  font-size: 36px;
+  color: #d1cece;
+  text-decoration: none;
+}
+
+
+.movieNav ul li a:hover{
+  color: black;
+}
+
+/* * MovieList 컴포넌트 */
+.movieList{
+  display: flex;
+  flex-direction: column;
+}
+
+.movieList li {
+  width: 95%;
+  padding: 24px;
+  background-color: #d9d9d9;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.movieList li strong{
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.movieList li span{
+ font-size: 24px;
+}
+
+.movieList li span{
+  margin-bottom: 12px;
+}
+
+.movieList li span:nth-child(2){
+  font-weight: 700;
+ }
