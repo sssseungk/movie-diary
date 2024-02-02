@@ -123,10 +123,10 @@
 }
 
 .movieList li {
-  width: 95%;
+  width: 90%;
   padding: 24px;
   background-color: #d9d9d9;
-  margin-bottom: 16px;
+  margin-bottom: 28px;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
