@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function MovieDetail() {
+function MovieDetail({giveDetail}) {
 
   const [state, setState] = useState({
     date: "",
@@ -9,10 +9,15 @@ function MovieDetail() {
     star: "",
   })
 
-  const handleInfo = (e) => setState({
-    ...state,
-    [e.target.name]: e.target.value,
-  })
+  const handleInfo = (e) => {
+    setState({
+      ...state,
+      [e.target.name]: e.target.value,
+    });
+    giveDetail(state);
+  }
+
+  
 
   return (
     <div className='movieDetail'>

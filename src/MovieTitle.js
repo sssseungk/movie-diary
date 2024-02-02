@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 
-function MovieTitle() {
+function MovieTitle({giveTitle}) {
 
   const [title, setTitle] = useState("");
+
   const onChange = (e) => {
-    setTitle(e.target.value)
+    setTitle(e.target.value);
+    giveTitle(e.target.value);
   }
 
   return (
