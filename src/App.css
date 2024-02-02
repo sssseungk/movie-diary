@@ -10,7 +10,7 @@
   max-width: 1024px;
   border-radius: 16px;
   margin: 0 auto;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
 }
 
 /* * movieWrite */
@@ -113,6 +113,7 @@
 
 .movieNav ul li a:hover{
   color: black;
+  transition: color 0.5s ease-in-out;
 }
 
 /* * MovieList 컴포넌트 */
@@ -146,4 +147,26 @@
 
 .movieList li span:nth-child(2){
   font-weight: 700;
- }
+}
+
+/* * SubmitBtn 컴포넌트 */
+.submitBtn{
+  text-align: right;
+}
+
+.submitBtn button{
+  cursor: pointer;
+  font-family: 'Gowun Dodum', sans-serif;
+  background-color: #ACB7C0;
+  border-radius: 8px;
+  padding: 20px 32px;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.submitBtn button:hover{
+  background-color: #608080;
+  transition: background-color 0.3s ease-in-out;
+}
+
