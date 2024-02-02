@@ -1,75 +1,79 @@
-<<<<<<< HEAD
-# movie-diary
-simple-diary 응용한 미니 프로젝트
-=======
-# Getting Started with Create React App
+### 🎬 간단한 영화 기록 다이어리
+한입 크기로 잘라 먹는 리액트 강의 일기장 실습 응용한 미니 프로젝트 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+<br />
 
-In the project directory, you can run:
+### 1일차 (02. 02)
+- <strong>관람 영화 정보</strong>를 작성하는 컴포넌트 구성
 
-### `npm start`
+![alt text](image-2.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- <strong>작성한 관람 정보</strong>들을 렌더링하는 컴포넌트 구성
 
-### `npm test`
+![alt text](image-3.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br/>
+<br/>
 
-### `npm run build`
+#### ✔️ 구현한 것
+- 영화 제목, 관람 정보, 별점 평가 입력 처리
+- 저장하기 버튼 클릭 시 입력 조건 확인 및 alert로 알려주기
+- App.js에 임의로 생성한 영화 데이터 리스트 렌더링하기
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br/>
+<br/>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### ⭐ 추가해야할 것
+- 저장하기 버튼 클릭 시 alert가 아닌 useRef로 포커스 이동시키기
+- 임의로 생성한 데이터가 아닌, 사용자가 입력한 데이터 렌더링하기
+- MovieList 컴포넌트에서 리스트 렌더링할 때 각 리스트 아이템들을 MovieItem 컴포넌트로 분리하기
+- 이미지 첨부 기능 및 렌더링 기능 추가하기
+<br/>
+<br/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### 🌠 트러블 슈팅
+🚨 새로운 컴포넌트 파일을 추가하였는데 Module not found: Can't resolve '라이브러리명'.. 에러가 발생하면서 렌더링되지 않는 문제 발생
+➡️ node_modules 폴더, package-lock.json 파일 삭제 후 npm install로 재설치하여 해결
+<br/>
 
-### `npm run eject`
+🚨 저장하기 버튼을 클릭했을 때 사용자가 입력한 문자열의 길이를 조건처리하여 alert 창을 띄우고 싶은데, 사용자가 입력하는 값과 버튼 컴포넌트가 분리되어 있어 MovieTitle의 상태를 상위 컴포넌트인 MovieWrite으로 전달하고, MovieWrite에서 받은 상태를 SubmitBtn으로 전달해야했음 
+```js
+function MovieWrite() {
+  const [movieTitle, setMovieTitle] = useState("");
+  const giveTitle = (title) => {
+    setMovieTitle(title);
+  }
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  return (
+    <div className='movieWrite'>
+      <MovieTitle giveTitle={giveTitle} />
+      <SubmitBtn movieTitle={movieTitle} />
+    </div>
+  )
+}
+```
+➡️ 상위 컴포넌트인 MovieWrite에서 상태를 하나 더 만들고, 함수를 만들어서 하위 컴포넌트로 해당 함수를 전달한다. 
+```js
+import React, { useState } from 'react'
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> 1ae7d04 (Initialize project using Create React App)
+function MovieTitle({giveTitle}) {
+  const [title, setTitle] = useState("");
+  const onChange = (e) => {
+    setTitle(e.target.value);
+    giveTitle(e.target.value);
+  }
+  return (
+    <div className='movieTitle'>
+      <input 
+        value={title}
+        onChange={onChange}
+      />
+    </div>
+  )
+}
+```
+➡️ 상위 컴포넌트에서 하위 컴포넌트로 전달한 상위 컴포넌트의 상태를 변화시키는 함수를 props로 받아서 해당 함수를 활용해 상위 컴포넌트의 상태를 변경시키는 방식으로 구현함.
