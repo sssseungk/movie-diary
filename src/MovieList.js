@@ -1,16 +1,14 @@
 import React from 'react'
+import MovieItem from './MovieItem';
 
 function MovieList({movieData}) {
   return (
     <ul className='movieList'>
       {movieData.map((it) => 
-        <li key={it.id}>
-          <strong>{it.title}</strong>
-          <span>{it.date}</span>
-          <span>{it.theater}</span>
-          <span>{it.seat}</span>
-          <span>{it.star}</span>
-        </li>
+        <MovieItem 
+          key={it.id}
+          {...it}
+        />
       )}
     </ul>
   )
