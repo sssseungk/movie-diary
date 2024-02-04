@@ -30,9 +30,9 @@ function App() {
     setData(newMovieList);
   }
 
-  const onEdit = (targetId, newTitle) => {
+  const onEdit = (targetId, newTitle, newDate, newTheater, newSeat, newStar) => {
     setData(
-      data.map((it) => it.id === targetId ? {...it, title: newTitle} : it)
+      data.map((it) => it.id === targetId ? {...it, title: newTitle, date: newDate, theater: newTheater, seat: newSeat, star: newStar} : it)
     );
   }
 
