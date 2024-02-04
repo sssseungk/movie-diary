@@ -18,13 +18,14 @@ function App() {
       seat,
       star
     }
+    setData([newItem, ...data]);
   }
 
   return (
     <div className='movieDiary'>
-      <MovieEditor/>
+      <MovieEditor onCreate={onCreate}/>
       <MovieNav/>
-      <MovieList movieData={[]}/>
+      <MovieList movieData={data}/>
     </div>
   )
 }

@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 function MovieEditor({onCreate}) {
+  const titleRef = useRef();
 
   const [state, setState] = useState({
     title:"",
     date: "",
     theater: "",
     seat: "",
-    star: "",
+    star: 1,
   })
 
   const handleInfo = (e) => {
@@ -18,7 +19,20 @@ function MovieEditor({onCreate}) {
   }
 
   const onClick = () => {
+    if(state.title.length < 1){
+      alert('영화 제목은 최소 한 글자 이상 입력해주세요!');
+      titleRef.current.focus();
+      return;
+    }
     alert('저장 완료!')
+    onCreate(state.title, state.date, state.theater, state.seat, state.star);
+    setState({
+      title:"",
+      date: "",
+      theater: "",
+      seat: "",
+      star: 1,
+    })
   }
   
 
@@ -29,6 +43,7 @@ function MovieEditor({onCreate}) {
         <input 
           id="title"
           name="title"
+          ref={titleRef}
           value={state.title}
           type='text' 
           placeholder='최소 한 글자 이상 입력하세요.'
