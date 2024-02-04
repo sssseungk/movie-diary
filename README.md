@@ -8,13 +8,13 @@
 ### 1일차
 - <strong>관람 영화 정보</strong>를 작성하는 컴포넌트 구성
 
-![alt text](image-4.png)
+<image src="./src/images/day1-image1.png">
 
 <br/>
 
 - <strong>작성한 관람 정보</strong>들을 렌더링하는 컴포넌트 구성
 
-![alt text](image-5.png)
+<image src="./src/images/day1-image2.png">
 
 <br/>
 <br/>
@@ -87,13 +87,14 @@ function MovieTitle({giveTitle}) {
 - <strong>사용자가 입력한</strong> 영화 기록 데이터 <strong>저장</strong> 기능 추가 (리스트 렌더링) 
 -> 임의로 생성했던 데이터를 렌더링하는 방식에서 사용자가 입력한 데이터를 렌더링하도록 변경함
 
-![alt text](image-8.png)
+<image src="./src/images/day2-image1.png">
 
+<br/>
 <br/>
 
 - <strong>저장한 영화 기록 삭제, 수정 기능 추가</strong>
 
-![alt text](image-7.png)
+<image src="./src/images/day2-image2.png">
 
 <br/>
 <br/>
