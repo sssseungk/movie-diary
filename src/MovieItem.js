@@ -1,4 +1,4 @@
-function MovieItem({id, title, date, theater, seat, star}) {
+function MovieItem({id, title, date, theater, seat, star, onRemove}) {
 
   // 사용자가 입력한 별점 별 이모티콘으로 표현하는 함수
   const renderStar = (count) => {
@@ -6,6 +6,11 @@ function MovieItem({id, title, date, theater, seat, star}) {
     return stars;
   }
 
+  const onClick = () => {
+    if(window.confirm(`${id}번 째 기록을 삭제하시겠습니까?`)){
+      onRemove(id);
+    }
+  }
   return (
     <li key={id}>
       <strong>{title}</strong>
@@ -13,6 +18,7 @@ function MovieItem({id, title, date, theater, seat, star}) {
       <span>{theater}</span>
       <span>{seat}</span>
       <span>{renderStar(star)}</span>
+      <button onClick={onClick}>삭제하기</button>
     </li>
   )
 }
