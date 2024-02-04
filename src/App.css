@@ -117,33 +117,6 @@
   flex-direction: column;
 }
 
-.movieList li {
-  width: 90%;
-  padding: 24px;
-  background-color: #d9d9d9;
-  margin-bottom: 28px;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-}
-
-.movieList li strong{
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.movieList li span{
- font-size: 24px;
-}
-
-.movieList li span{
-  margin-bottom: 12px;
-}
-
-.movieList li span:nth-child(2){
-  font-weight: 700;
-}
-
 .movieEditor button{
   cursor: pointer;
   font-family: 'Gowun Dodum', sans-serif;
@@ -157,6 +130,71 @@
 
 .movieEditor button:hover{
   background-color: #608080;
-  transition: background-color 0.3s ease-in-out;
+  color: white;
+  transition: background-color 0.3s ease-in-out, color 0.2s ease-in-out;
 }
 
+/* * MovieItem 컴포넌트 */
+.movieItem{
+  width: 90%;
+  padding: 24px;
+  background-color: #d9d9d9;
+  margin-bottom: 28px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.movieItem input{
+  font-family: 'Gowun Dodum', sans-serif;
+  width: 400px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ffffffa8;
+  font-size: 24px;
+  outline: none;
+  margin-bottom: 16px;
+}
+
+.movieItem strong{
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.movieItem span{
+ font-size: 24px;
+}
+
+.movieItem span{
+  margin-bottom: 12px;
+}
+
+.movieItem span:nth-child(2){
+  font-weight: 700;
+}
+
+.movieItem div {
+  text-align: right;
+}
+
+.movieItem div button{
+  cursor: pointer;
+  font-family: 'Gowun Dodum', sans-serif;
+  background-color: #ACB7C0;
+  border-radius: 8px;
+  padding: 8px 20px;
+  border: none;
+  font-size: 20px;
+  /* font-weight: 700; */
+}
+
+.movieItem div button:hover{
+  background-color: #608080;
+  color: white;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.movieItem div button:first-child{
+  margin-right: 10px;
+}

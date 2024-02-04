@@ -48,14 +48,14 @@ function MovieItem({id, title, date, theater, seat, star, onRemove, onEdit}) {
   }
 
   return (
-    <li key={id}>
+    <li key={id} className="movieItem">
       {isEdit ? (
         <>  
-          <input name="title" value={localContent.title} onChange={editInfo}/>
-          <input name="date" value={localContent.date} onChange={editInfo}/>
-          <input name="theater" value={localContent.theater} onChange={editInfo}/>
-          <input name="seat" value={localContent.seat} onChange={editInfo}/>
-          <input name="star" value={localContent.star} onChange={editInfo}/>
+          <input name="title" value={localContent.title} onChange={editInfo} />
+          <input name="date" value={localContent.date} onChange={editInfo} />
+          <input name="theater" value={localContent.theater} onChange={editInfo} />
+          <input name="seat" value={localContent.seat} onChange={editInfo} />
+          <input name="star" value={localContent.star} onChange={editInfo} />
         </>
       ) : (
         <>
