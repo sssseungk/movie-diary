@@ -97,6 +97,7 @@
 }
 
 .movieNav ul li a{
+  width: 100%;
   padding: 24px 231.5px;
   display: block;
   list-style-type: none;
