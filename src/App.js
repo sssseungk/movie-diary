@@ -5,12 +5,11 @@ import { useRef, useState } from 'react';
 import MovieEditor from './MovieEditor';
 
 
-
 function App() {
 
   const [data, setData] = useState([]);
   const dataId = useRef(1);
-
+  
   // 영화 기록 생성하는 함수
   const onCreate = (title, date, theater, seat, star) => {
     const newItem = {
@@ -31,11 +30,17 @@ function App() {
     setData(newMovieList);
   }
 
+  const onEdit = (targetId, newTitle) => {
+    setData(
+      data.map((it) => it.id === targetId ? {...it, title: newTitle} : it)
+    );
+  }
+
   return (
     <div className='movieDiary'>
       <MovieEditor onCreate={onCreate}/>
       <MovieNav/>
-      <MovieList movieData={data} onRemove={onRemove}/>
+      <MovieList movieData={data} onRemove={onRemove} onEdit={onEdit}/>
     </div>
   )
 }
