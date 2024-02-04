@@ -87,7 +87,7 @@ function MovieEditor({onCreate}) {
         </div>
         <div className='movieStar'>
           <strong>별점을 평가하세요.</strong>
-          <select name="star" onChange={handleInfo}>
+          <select value={state.star} name="star" onChange={handleInfo}>
             <option value={1}>⭐</option>
             <option value={2}>⭐⭐</option>
             <option value={3}>⭐⭐⭐</option>
