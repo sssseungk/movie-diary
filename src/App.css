@@ -13,16 +13,10 @@
   background-color: #f5f5f5;
 }
 
-/* * movieWrite */
-.movieWrite{
-  padding: 60px 80px;
-}
-
 /* * movieTitle 컴포넌트 */
 .movieTitle{
   display: flex;
   flex-direction: column;
-  margin-bottom: 80px;
 }
 
 .movieTitle strong{
@@ -41,24 +35,25 @@
   outline: none;
 }
 
-/* * MovieDetail 컴포넌트 */
-.movieDetail{
+/* * MovieEditor 컴포넌트 */
+.movieEditor{
+  padding: 50px;
   display: flex;
   flex-direction: column;
 }
 
-.movieDetail strong{
+.movieEditor strong{
   font-size: 28px;
   margin-bottom: 18px;
 }
 
-.movieDetail div label{
+.movieEditor div label{
   display: inline-block;
   width: 82px;
   font-size: 24px;
 }
 
-.movieDetail input{
+.movieEditor input{
   font-family: 'Gowun Dodum', sans-serif;
   width: 360px;
   padding: 16px 20px;
@@ -70,17 +65,17 @@
   margin-bottom: 16px;
 }
 
-.movieDetail .seatContainer{
+.movieEditor .seatContainer{
   margin-bottom: 80px;
 }
 
-.movieDetail .movieStar{
+.movieEditor .movieStar{
   display: flex;
   flex-direction: column;
   margin-bottom: 100px;
 }
 
-.movieDetail .movieStar select{
+.movieEditor .movieStar select{
   width: 180px;
   font-size: 20px;
   padding: 10px;
@@ -149,12 +144,7 @@
   font-weight: 700;
 }
 
-/* * SubmitBtn 컴포넌트 */
-.submitBtn{
-  text-align: right;
-}
-
-.submitBtn button{
+.movieEditor button{
   cursor: pointer;
   font-family: 'Gowun Dodum', sans-serif;
   background-color: #ACB7C0;
@@ -165,7 +155,7 @@
   font-weight: 700;
 }
 
-.submitBtn button:hover{
+.movieEditor button:hover{
   background-color: #608080;
   transition: background-color 0.3s ease-in-out;
 }
