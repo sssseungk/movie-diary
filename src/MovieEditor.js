@@ -26,6 +26,7 @@ function MovieEditor({onCreate}) {
     }
     alert('저장 완료!')
     onCreate(state.title, state.date, state.theater, state.seat, state.star);
+    // 입력란 초기화
     setState({
       title:"",
       date: "",

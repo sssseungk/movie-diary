@@ -30,6 +30,7 @@ function App() {
     setData(newMovieList);
   }
 
+  // 저장한 영화 기록 수정하는 함수
   const onEdit = (targetId, newTitle, newDate, newTheater, newSeat, newStar) => {
     setData(
       data.map((it) => it.id === targetId ? {...it, title: newTitle, date: newDate, theater: newTheater, seat: newSeat, star: newStar} : it)
